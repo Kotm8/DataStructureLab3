@@ -13,7 +13,7 @@ def find_min_cost(official, memo):
     return min_cost
 
 
-official_amount = int(input("Enter number of officials: "))
+official_amount = int(input("Введите количество чиновников чиновников: "))
 
 
 subordinates = [[] for _ in range(official_amount)]
@@ -21,7 +21,7 @@ signature_requirements = [[] for _ in range(official_amount)]
 
 
 for i in range(official_amount):
-    input_data = input(f"Enter subordinates and signature requirements for official {i}: ").split()
+    input_data = input(f"Введите чиновников и количество подписей для подчиненных {i}: ").split()
     num_subordinates = int(input_data[0])
     index = 1
     
@@ -42,4 +42,4 @@ for i in range(official_amount):
 
 memo = {}
 result = find_min_cost(0, memo)
-print(f"Minimum bribe cost to obtain the top official's signature: {result}")
+print(f"Минимальная стоимость взятки для получения подписи высшего должностного министра: {result}")
